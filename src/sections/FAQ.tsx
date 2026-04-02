@@ -27,7 +27,7 @@ export function FAQ() {
         tl.fromTo(
           titleRef.current,
           { scale: 0.9, opacity: 0 },
-          { scale: 1, opacity: 1, duration: 0.7, ease: 'expo.out' }
+          { scale: 1, opacity: 1, duration: 0.35, ease: 'expo.out' }
         );
 
         // FAQ items stagger from alternating sides
@@ -37,7 +37,7 @@ export function FAQ() {
             tl.fromTo(
               item,
               { x: fromX, opacity: 0 },
-              { x: 0, opacity: 1, duration: 0.6, ease: 'power2.out' },
+              { x: 0, opacity: 1, duration: 0.30, ease: 'power2.out' },
               `-=0.5`
             );
           }

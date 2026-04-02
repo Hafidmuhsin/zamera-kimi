@@ -34,7 +34,7 @@ export function Services() {
             y: 0,
             opacity: 1,
             letterSpacing: '0px',
-            duration: 0.8,
+            duration: 0.40,
             ease: 'expo.out',
           }
         );
@@ -43,7 +43,7 @@ export function Services() {
         tl.fromTo(
           subtitleRef.current,
           { filter: 'blur(15px)', opacity: 0 },
-          { filter: 'blur(0)', opacity: 1, duration: 0.6, ease: 'power2.out' },
+          { filter: 'blur(0)', opacity: 1, duration: 0.30, ease: 'power2.out' },
           '-=0.4'
         );
 
@@ -56,14 +56,14 @@ export function Services() {
             tl.fromTo(
               line,
               { width: 0 },
-              { width: '100%', duration: 1, ease: 'expo.inOut' },
+              { width: '100%', duration: 0.50, ease: 'expo.inOut' },
               `-=${0.8 - i * 0.2}`
             );
 
             tl.fromTo(
               number,
               { scale: 0.5, opacity: 0 },
-              { scale: 1, opacity: 1, duration: 0.8, ease: 'elastic.out(1, 0.5)' },
+              { scale: 1, opacity: 1, duration: 0.40, ease: 'elastic.out(1, 0.5)' },
               `-=0.7`
             );
           }
@@ -93,7 +93,7 @@ export function Services() {
     gsap.to(imageRef.current, {
       x: x - 150,
       y: y - 200,
-      duration: 0.15,
+      duration: 0.20,
       ease: 'power2.out',
     });
   };
@@ -104,7 +104,7 @@ export function Services() {
       gsap.to(imageRef.current, {
         opacity: 1,
         scale: 1,
-        duration: 0.6,
+        duration: 0.30,
         ease: 'expo.out',
       });
     }
@@ -116,7 +116,7 @@ export function Services() {
       gsap.to(imageRef.current, {
         opacity: 0,
         scale: 0.9,
-        duration: 0.4,
+        duration: 0.20,
         ease: 'power2.out',
       });
     }

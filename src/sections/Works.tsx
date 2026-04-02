@@ -39,8 +39,8 @@ export function Works() {
             {
               scale: 1,
               opacity: 1,
-              duration: 0.6,
-              stagger: 0.08,
+              duration: 0.30,
+              stagger: 0.04,
               ease: 'elastic.out(1, 0.5)',
             }
           );
@@ -50,7 +50,7 @@ export function Works() {
         tl.fromTo(
           subtitleRef.current,
           { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' },
+          { y: 0, opacity: 1, duration: 0.30, ease: 'power2.out' },
           '-=0.3'
         );
 
@@ -63,7 +63,7 @@ export function Works() {
               {
                 rotateY: 0,
                 opacity: 1,
-                duration: 1,
+                duration: 0.50,
                 ease: 'expo.out',
               },
               `-=${0.85 - i * 0.15}`
@@ -116,7 +116,7 @@ export function Works() {
     gsap.to(card, {
       rotateX: -y * 10,
       rotateY: x * 16,
-      duration: 0.1,
+      duration: 0.20,
       ease: 'none',
     });
   };
@@ -128,7 +128,7 @@ export function Works() {
     gsap.to(card, {
       rotateX: 0,
       rotateY: 0,
-      duration: 0.4,
+      duration: 0.20,
       ease: 'expo.out',
     });
     setHoveredIndex(null);

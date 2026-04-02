@@ -43,7 +43,7 @@ export function Blog() {
         tl.fromTo(
           descRef.current,
           { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' },
+          { y: 0, opacity: 1, duration: 0.30, ease: 'power2.out' },
           0.8
         );
 
@@ -60,7 +60,7 @@ export function Blog() {
               },
               {
                 clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-                duration: 1,
+                duration: 0.50,
                 ease: 'expo.out',
               },
               1 + i * 0.2
@@ -69,7 +69,7 @@ export function Blog() {
             tl.fromTo(
               content,
               { y: 30, opacity: 0 },
-              { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' },
+              { y: 0, opacity: 1, duration: 0.30, ease: 'power2.out' },
               `-=0.6`
             );
           }
@@ -79,7 +79,7 @@ export function Blog() {
         tl.fromTo(
           buttonRef.current,
           { x: 50, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.5, ease: 'back.out(1.7)' },
+          { x: 0, opacity: 1, duration: 0.25, ease: 'back.out(1.7)' },
           '-=0.3'
         );
       },

@@ -98,14 +98,14 @@ export function Contact() {
         tl.fromTo(
           dividerRef.current,
           { height: 0 },
-          { height: '100%', duration: 1.2, ease: 'expo.inOut' }
+          { height: '100%', duration: 0.60, ease: 'expo.inOut' }
         );
 
         // Form container slide
         tl.fromTo(
           formRef.current,
           { x: -60, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.8, ease: 'expo.out' },
+          { x: 0, opacity: 1, duration: 0.40, ease: 'expo.out' },
           '-=0.8'
         );
 
@@ -119,7 +119,7 @@ export function Contact() {
           {
             scale: 1,
             clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-            duration: 1,
+            duration: 0.50,
             ease: 'expo.out',
           },
           '-=0.6'
@@ -134,8 +134,8 @@ export function Contact() {
             {
               opacity: 1,
               y: 0,
-              duration: 0.8,
-              stagger: 0.03,
+              duration: 0.40,
+              stagger: 0.02,
               ease: 'power2.out',
             },
             '-=0.7'
@@ -146,7 +146,7 @@ export function Contact() {
         tl.fromTo(
           subtitleRef.current,
           { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' },
+          { y: 0, opacity: 1, duration: 0.25, ease: 'power2.out' },
           '-=0.5'
         );
 
@@ -156,7 +156,7 @@ export function Contact() {
             tl.fromTo(
               input,
               { y: 30, opacity: 0 },
-              { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' },
+              { y: 0, opacity: 1, duration: 0.25, ease: 'power2.out' },
               `-=${0.4 - i * 0.1}`
             );
           }
@@ -166,7 +166,7 @@ export function Contact() {
         tl.fromTo(
           infoRef.current,
           { x: 40, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.8, ease: 'expo.out' },
+          { x: 0, opacity: 1, duration: 0.40, ease: 'expo.out' },
           '-=0.5'
         );
 
@@ -174,7 +174,7 @@ export function Contact() {
         tl.fromTo(
           buttonRef.current,
           { scale: 0 },
-          { scale: 1, duration: 0.6, ease: 'elastic.out(1, 0.5)' },
+          { scale: 1, duration: 0.30, ease: 'elastic.out(1, 0.5)' },
           '-=0.3'
         );
       },

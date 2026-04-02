@@ -41,7 +41,7 @@ export function About() {
           {
             clipPath: 'inset(0% 0 0 0)',
             scale: 1,
-            duration: 1.2,
+            duration: 0.60,
             ease: 'expo.out',
           }
         );
@@ -53,7 +53,7 @@ export function About() {
           {
             clipPath: 'inset(0 0% 0 0)',
             scale: 1,
-            duration: 1.1,
+            duration: 0.55,
             ease: 'expo.out',
           },
           '-=0.9'
@@ -68,8 +68,8 @@ export function About() {
             {
               y: 0,
               opacity: 1,
-              duration: 0.8,
-              stagger: 0.2,
+              duration: 0.40,
+              stagger: 0.10,
               ease: 'back.out(1.7)',
             },
             '-=0.8'
@@ -80,7 +80,7 @@ export function About() {
         tl.fromTo(
           textRef.current,
           { y: 30, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' },
+          { y: 0, opacity: 1, duration: 0.35, ease: 'power2.out' },
           '-=0.4'
         );
 
@@ -88,7 +88,7 @@ export function About() {
         tl.fromTo(
           lineRef.current,
           { width: 0 },
-          { width: '120%', duration: 1, ease: 'expo.inOut' },
+          { width: '120%', duration: 0.50, ease: 'expo.inOut' },
           '-=0.6'
         );
 
@@ -100,7 +100,7 @@ export function About() {
             scale: 1,
             rotate: 0,
             opacity: 1,
-            duration: 0.9,
+            duration: 0.45,
             ease: 'elastic.out(1, 0.5)',
           },
           '-=0.7'
@@ -115,8 +115,8 @@ export function About() {
             {
               y: 0,
               opacity: 1,
-              duration: 0.6,
-              stagger: 0.05,
+              duration: 0.30,
+              stagger: 0.03,
               ease: 'power2.out',
             },
             '-=0.5'
@@ -127,7 +127,7 @@ export function About() {
         tl.fromTo(
           statsRef.current,
           { y: 30, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' },
+          { y: 0, opacity: 1, duration: 0.35, ease: 'power2.out' },
           '-=0.3'
         );
       },

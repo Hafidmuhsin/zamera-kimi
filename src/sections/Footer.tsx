@@ -35,14 +35,14 @@ export function Footer() {
         tl.fromTo(
           marqueeRef.current,
           { opacity: 0 },
-          { opacity: 1, duration: 1, ease: 'power2.out' }
+          { opacity: 1, duration: 0.50, ease: 'power2.out' }
         );
 
         // Top border draw
         tl.fromTo(
           borderRef.current,
           { width: 0 },
-          { width: '100%', duration: 0.8, ease: 'expo.inOut' },
+          { width: '100%', duration: 0.40, ease: 'expo.inOut' },
           '-=0.5'
         );
 
@@ -52,7 +52,7 @@ export function Footer() {
             tl.fromTo(
               link,
               { x: -30, opacity: 0 },
-              { x: 0, opacity: 1, duration: 0.4, ease: 'power2.out' },
+              { x: 0, opacity: 1, duration: 0.20, ease: 'power2.out' },
               `-=${0.35 - i * 0.1}`
             );
           }
@@ -64,7 +64,7 @@ export function Footer() {
             tl.fromTo(
               link,
               { x: 30, opacity: 0 },
-              { x: 0, opacity: 1, duration: 0.4, ease: 'power2.out' },
+              { x: 0, opacity: 1, duration: 0.20, ease: 'power2.out' },
               `-=${0.35 - i * 0.1}`
             );
           }
@@ -74,7 +74,7 @@ export function Footer() {
         tl.fromTo(
           copyrightRef.current,
           { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' },
+          { y: 0, opacity: 1, duration: 0.25, ease: 'power2.out' },
           '-=0.2'
         );
       },

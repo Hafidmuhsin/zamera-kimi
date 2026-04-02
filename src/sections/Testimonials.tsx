@@ -27,7 +27,7 @@ export function Testimonials() {
         tl.fromTo(
           titleRef.current,
           { letterSpacing: '10px', opacity: 0 },
-          { letterSpacing: '0px', opacity: 1, duration: 0.8, ease: 'expo.out' }
+          { letterSpacing: '0px', opacity: 1, duration: 0.40, ease: 'expo.out' }
         );
 
         // Cards 3D rise
@@ -46,7 +46,7 @@ export function Testimonials() {
                 z: 0,
                 rotateX: 0,
                 opacity: 1,
-                duration: 1,
+                duration: 0.50,
                 ease: 'expo.out',
               },
               `-=${0.8 - i * 0.2}`
@@ -60,7 +60,7 @@ export function Testimonials() {
                 { scale: 0 },
                 {
                   scale: 1,
-                  duration: 0.5,
+                  duration: 0.25,
                   ease: 'elastic.out(1, 0.5)',
                 },
                 '-=0.7'
@@ -73,7 +73,7 @@ export function Testimonials() {
               tl.fromTo(
                 quoteMark,
                 { scale: 0.5, opacity: 0 },
-                { scale: 1, opacity: 0.3, duration: 0.4, ease: 'power2.out' },
+                { scale: 1, opacity: 0.3, duration: 0.20, ease: 'power2.out' },
                 '-=0.4'
               );
             }

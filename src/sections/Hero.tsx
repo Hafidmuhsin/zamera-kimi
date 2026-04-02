@@ -35,14 +35,14 @@ export function Hero() {
     tl.fromTo(
       imageRef.current,
       { scale: 1.1, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 1.8, ease: 'expo.out' }
+      { scale: 1, opacity: 1, duration: 0.90, ease: 'expo.out' }
     );
 
     // Eyebrow label animation
     tl.fromTo(
       eyebrowRef.current,
       { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' },
+      { y: 0, opacity: 1, duration: 0.30, ease: 'power2.out' },
       '-=1.2'
     );
 
@@ -56,8 +56,8 @@ export function Hero() {
           rotateY: 0,
           y: 0,
           opacity: 1,
-          duration: 0.9,
-          stagger: 0.1,
+          duration: 0.45,
+          stagger: 0.05,
           ease: 'back.out(1.7)',
         },
         '-=1.0'
@@ -68,7 +68,7 @@ export function Hero() {
     tl.fromTo(
       subtitleRef.current,
       { filter: 'blur(20px)', opacity: 0 },
-      { filter: 'blur(0px)', opacity: 1, duration: 0.8, ease: 'power2.out' },
+      { filter: 'blur(0px)', opacity: 1, duration: 0.40, ease: 'power2.out' },
       '-=0.6'
     );
 
@@ -76,7 +76,7 @@ export function Hero() {
     tl.fromTo(
       ctaRef.current,
       { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.7, ease: 'expo.out' },
+      { y: 0, opacity: 1, duration: 0.35, ease: 'expo.out' },
       '-=0.4'
     );
 
@@ -84,7 +84,7 @@ export function Hero() {
     tl.fromTo(
       servicesRef.current,
       { x: -50, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.7, ease: 'expo.out' },
+      { x: 0, opacity: 1, duration: 0.35, ease: 'expo.out' },
       '-=0.4'
     );
 
@@ -92,7 +92,7 @@ export function Hero() {
     tl.fromTo(
       lineRef.current,
       { height: 0 },
-      { height: 200, duration: 1.5, ease: 'expo.inOut' },
+      { height: 200, duration: 0.75, ease: 'expo.inOut' },
       '-=0.8'
     );
 
@@ -100,7 +100,7 @@ export function Hero() {
     tl.fromTo(
       copyrightRef.current,
       { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' },
+      { y: 0, opacity: 1, duration: 0.25, ease: 'power2.out' },
       '-=1'
     );
 
@@ -108,7 +108,7 @@ export function Hero() {
     tl.fromTo(
       scrollIndicatorRef.current,
       { y: -20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' },
+      { y: 0, opacity: 1, duration: 0.30, ease: 'power2.out' },
       '-=0.5'
     );
 

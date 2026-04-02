@@ -34,14 +34,14 @@ export function Pricing() {
         tl.fromTo(
           titleRef.current,
           { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.7, ease: 'expo.out' }
+          { y: 0, opacity: 1, duration: 0.35, ease: 'expo.out' }
         );
 
         // Subtitle
         tl.fromTo(
           subtitleRef.current,
           { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' },
+          { y: 0, opacity: 1, duration: 0.25, ease: 'power2.out' },
           '-=0.4'
         );
 
@@ -81,7 +81,7 @@ export function Pricing() {
                 tl.fromTo(
                   accentLine,
                   { width: 0 },
-                  { width: '100%', duration: 0.8, ease: 'expo.inOut' },
+                  { width: '100%', duration: 0.40, ease: 'expo.inOut' },
                   '-=0.5'
                 );
               }
@@ -95,8 +95,8 @@ export function Pricing() {
               {
                 x: 0,
                 opacity: 1,
-                duration: 0.4,
-                stagger: 0.05,
+                duration: 0.20,
+                stagger: 0.03,
                 ease: 'power2.out',
               },
               '-=0.6'
@@ -109,7 +109,7 @@ export function Pricing() {
           const obj = { value: 0 };
           gsap.to(obj, {
             value: plan.price,
-            duration: 1.2,
+            duration: 0.60,
             delay: 0.5,
             ease: 'power2.out',
             onUpdate: () => {
@@ -144,7 +144,7 @@ export function Pricing() {
         z: 30,
         rotateY: 0,
         boxShadow: '0 30px 60px rgba(0,0,0,0.4)',
-        duration: 0.4,
+        duration: 0.20,
         ease: 'expo.out',
       });
     } else {
@@ -153,7 +153,7 @@ export function Pricing() {
         z: 0,
         rotateY: 0,
         boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
-        duration: 0.4,
+        duration: 0.20,
         ease: 'power2.out',
       });
     }
