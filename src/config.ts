@@ -70,7 +70,7 @@ export const heroConfig: HeroConfig = {
   subtitle: "Gold & Diamonds",
   tagline: "The Jeweller with a Difference",
   servicesLabel: "ZAMORIN LEGACY • CRAFTED FOR ETERNITY",
-  backgroundImage: "/hero-bg-premium.png",
+  backgroundImage: "./hero-bg-premium.png",
   copyright: "© 2025 Zamera Gold and Diamonds Pvt Ltd",
 };
 
@@ -99,7 +99,7 @@ export const aboutConfig: AboutConfig = {
   image1Alt: "Zamera Jewelry Showroom Interior",
   image2: "/about-2.jpg",
   image2Alt: "Master Craftsman at Work",
-  authorImage: "/photographer.jpg",
+  authorImage: "./photographer.jpg",
   authorName: "Witness the Craftsmanship",
   authorBio: "At Zamera, we believe in total transparency. Witness your masterpiece being made live by our master artisans with over 25 years of legacy. Our commitment to quality and customer satisfaction has made us a trusted name in Kerala's jewelry landscape.",
 };
@@ -125,14 +125,14 @@ export const worksConfig: WorksConfig = {
   title: "Our Gallery",
   subtitle: "A curated collection of our finest jewelry pieces, each crafted with precision and passion.",
   projects: [
-    { id: 1, title: "Eternal Solitaire", category: "Diamonds", image: "/gallery-1.jpg" },
-    { id: 2, title: "Temple Heritage Necklace", category: "Gold", image: "/gallery-2.jpg" },
-    { id: 3, title: "Diamond Tennis Bracelet", category: "Diamonds", image: "/gallery-3.jpg" },
-    { id: 4, title: "Pearl Elegance Pendant", category: "Gemstones", image: "/gallery-4.jpg" },
-    { id: 5, title: "Royal Onyx Ring", category: "Gold", image: "/gallery-5.jpg" },
-    { id: 6, title: "Traditional Anklet", category: "Gold", image: "/gallery-6.jpg" },
-    { id: 7, title: "Sapphire Halo Ring", category: "Gemstones", image: "/gallery-7.jpg" },
-    { id: 8, title: "Pearl Jhumka Earrings", category: "Bridal", image: "/gallery-8.jpg" },
+    { id: 1, title: "Eternal Solitaire", category: "Diamonds", image: "./gallery-1.jpg" },
+    { id: 2, title: "Temple Heritage Necklace", category: "Gold", image: "./gallery-2.jpg" },
+    { id: 3, title: "Diamond Tennis Bracelet", category: "Diamonds", image: "./gallery-3.jpg" },
+    { id: 4, title: "Pearl Elegance Pendant", category: "Gemstones", image: "./gallery-4.jpg" },
+    { id: 5, title: "Royal Onyx Ring", category: "Gold", image: "./gallery-5.jpg" },
+    { id: 6, title: "Traditional Anklet", category: "Gold", image: "./gallery-6.jpg" },
+    { id: 7, title: "Sapphire Halo Ring", category: "Gemstones", image: "./gallery-7.jpg" },
+    { id: 8, title: "Pearl Jhumka Earrings", category: "Bridal", image: "./gallery-8.jpg" },
   ],
 };
 
@@ -161,37 +161,37 @@ export const servicesConfig: ServicesConfig = {
       id: "01", 
       title: "Gold Necklaces", 
       description: "Exquisite traditional and contemporary gold necklaces, from delicate chains to elaborate temple designs.", 
-      image: "/collection-gold.jpg" 
+      image: "./collection-gold.jpg" 
     },
     { 
       id: "02", 
       title: "Diamond Rings", 
       description: "Brilliant solitaires, engagement rings, and statement pieces featuring certified diamonds.", 
-      image: "/collection-diamonds.jpg" 
+      image: "./collection-diamonds.jpg" 
     },
     { 
       id: "03", 
       title: "Bridal Sets", 
       description: "Complete bridal jewelry collections including necklaces, earrings, maang tikka, and bangles.", 
-      image: "/collection-bridal.jpg" 
+      image: "./collection-bridal.jpg" 
     },
     { 
       id: "04", 
       title: "Earrings & Studs", 
       description: "From elegant diamond studs to traditional jhumkas, find the perfect pair for every occasion.", 
-      image: "/collection-earrings.jpg" 
+      image: "./collection-earrings.jpg" 
     },
     { 
       id: "05", 
       title: "Bangles & Bracelets", 
       description: "Stunning gold bangles and diamond bracelets that add grace to every movement.", 
-      image: "/collection-bangles.jpg" 
+      image: "./collection-bangles.jpg" 
     },
     { 
       id: "06", 
       title: "Gemstone Jewelry", 
       description: "Precious gemstone pieces featuring emeralds, rubies, sapphires, and pearls in exquisite settings.", 
-      image: "/collection-gemstones.jpg" 
+      image: "./collection-gemstones.jpg" 
     },
   ],
 };
@@ -383,7 +383,7 @@ export const blogConfig: BlogConfig = {
       excerpt: "Every gold piece is certified by the Bureau of Indian Standards, ensuring you receive the exact purity you pay for.", 
       readTime: "2 min", 
       date: "Certified", 
-      image: "/collection-gold.jpg", 
+      image: "./collection-gold.jpg", 
       category: "Certification" 
     },
     { 
@@ -392,7 +392,7 @@ export const blogConfig: BlogConfig = {
       excerpt: "Our diamonds come with internationally recognized certificates, guaranteeing authenticity and quality.", 
       readTime: "3 min", 
       date: "Certified", 
-      image: "/gallery-1.jpg", 
+      image: "./gallery-1.jpg", 
       category: "Certification" 
     },
   ],
@@ -436,7 +436,7 @@ export const contactConfig: ContactConfig = {
   ],
   messageLabel: "Tell us about your requirements",
   submitButtonText: "SEND INQUIRY",
-  image: "/contact-bg-premium.png",
+  image: "./contact-bg-premium.png",
 };
 
 // ============================================================================
