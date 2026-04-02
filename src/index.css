@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cinzel:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Luxury Jewelry Color Palette - Warm Ivory & Gold */
+    --background: 0 0% 4%; /* #0A0A0A Rich Black */
+    --foreground: 36 30% 94%; /* #F5F0E8 Ivory */
+    --card: 0 0% 6%;
+    --card-foreground: 36 30% 94%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 36 30% 94%;
+    --primary: 43 55% 54%; /* #C9A84C Muted Gold */
+    --primary-foreground: 0 0% 4%;
+    --secondary: 40 10% 12%; 
+    --secondary-foreground: 36 30% 94%;
+    --muted: 40 10% 10%;
+    --muted-foreground: 30 10% 60%;
+    --accent: 43 55% 54%; 
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 15%; 
+    --input: 40 10% 12%;
+    --ring: 43 55% 54%;
+    --radius: 0px; /* Sharp corners for bespoke luxury feel */
+    
+    /* Custom properties - Zamera Branding */
+    --color-ivory: #F5F0E8;
+    --color-champagne: #F0E8D8;
+    --color-gold: #C9A84C;
+    --color-gold-hover: #A67C2E;
+    --color-charcoal: #1A1A1A;
+    --color-black: #0A0A0A;
+    --color-white: #FFFFFF;
+    --container-padding: 75px;
+    
+    /* Animation easings */
+    --ease-dramatic: cubic-bezier(0.87, 0, 0.13, 1);
+    --ease-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-expo-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-expo-in: cubic-bezier(0.7, 0, 0.84, 0);
+    --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    
+    /* Mouse position for parallax */
+    --mouse-x: 0;
+    --mouse-y: 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#0A0A0A] text-[#F5F0E8];
+    font-family: 'Jost', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+  }
+  
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-white);
+  }
+}
+
+@layer components {
+  /* Noise texture overlay - subtle grain for luxury feel */
+  .noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.015;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    animation: noise-animation 20s linear infinite;
+  }
+  
+  @keyframes noise-animation {
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(-5%, -5%); }
+    20% { transform: translate(-10%, 5%); }
+    30% { transform: translate(5%, -10%); }
+    40% { transform: translate(-5%, 15%); }
+    50% { transform: translate(-10%, 5%); }
+    60% { transform: translate(15%, 0); }
+    70% { transform: translate(0, 10%); }
+    80% { transform: translate(-15%, 0); }
+    90% { transform: translate(10%, 5%); }
+  }
+
+  /* Gold accent line */
+  .accent-line {
+    height: 2px;
+    background: var(--color-gold);
+    animation: pulse-gold 3s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-gold {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+  
+  /* Interactive hover states */
+  .hover-lift {
+    transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(201, 168, 76, 0.15);
+  }
+
+  /* Text gradient - Gold */
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-hover) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glass effect - Warm tint */
+  .glass {
+    background: rgba(250, 247, 242, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+  }
+
+  /* 3D perspective container */
+  .perspective-container {
+    perspective: 1200px;
+    transform-style: preserve-3d;
+  }
+
+  /* Marquee container */
+  .marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    animation: marquee 30s linear infinite;
+  }
+  
+  .marquee-content:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Clip path reveal */
+  .clip-reveal {
+    clip-path: inset(0 100% 0 0);
+    animation: clip-reveal 1.2s var(--ease-expo-out) forwards;
+  }
+  
+  @keyframes clip-reveal {
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  /* Stagger animations */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+  .stagger-7 { animation-delay: 0.7s; }
+  .stagger-8 { animation-delay: 0.8s; }
+  
+  /* Section reveal animation */
+  .section-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s var(--ease-smooth), transform 0.8s var(--ease-smooth);
+  }
+  
+  .section-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Gold shimmer effect for buttons */
+  .gold-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gold-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  .gold-shimmer:hover::after {
+    left: 100%;
+  }
+  
+  /* Cinzel font for labels */
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+  
+  /* Cormorant font for headings */
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  /* Jost font for body */
+  .font-jost {
+    font-family: 'Jost', sans-serif;
+  }
+}
+
+@layer utilities {
+  /* Text balance */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Hide scrollbar */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 3D transforms */
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  /* Gold border glow */
+  .gold-glow {
+    box-shadow: 0 0 20px rgba(201, 168, 76, 0.3);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .marquee-content {
+    animation: none !important;
+  }
+  
+  .noise-overlay {
+    animation: none !important;
+  }
+}
+
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    :root {
+      --display-xxl: 64px;
+      --display-xl: 48px;
+    }
+  }
